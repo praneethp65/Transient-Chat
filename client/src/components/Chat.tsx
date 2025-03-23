@@ -3,10 +3,9 @@ import { useParams } from "react-router-dom";
 import CopyIcon from "../icons/CopyIcon";
 
 function Chat() {
-  const wsRef = useRef<WebSocket>();
-  // const inputRef = useRef();
+  const wsRef = useRef<WebSocket | null>(null);
   const [inputText, setInputText] = useState("");
-  const { room } = useParams<{ room: string }>();
+  const { room } = useParams();
 
   const [messages, setMessages] = useState<String[]>([]);
   const [inputs, setInputs] = useState<String[]>([]);
