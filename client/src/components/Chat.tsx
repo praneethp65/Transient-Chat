@@ -6,7 +6,7 @@ function Chat() {
   const wsRef = useRef<WebSocket>();
   // const inputRef = useRef();
   const [inputText, setInputText] = useState("");
-  const { room } = useParams();
+  const { room } = useParams<{ room: string }>();
 
   const [messages, setMessages] = useState<String[]>([]);
   const [inputs, setInputs] = useState<String[]>([]);
