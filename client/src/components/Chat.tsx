@@ -27,7 +27,7 @@ function Chat() {
   }
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:8080");
+    const ws = new WebSocket("https://transient-chat.onrender.com");
     wsRef.current = ws;
 
     ws.onmessage = (event) => {
